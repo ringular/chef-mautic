@@ -4,4 +4,5 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "apt"
     chef.add_recipe "mautic"
   end
+  config.vm.network "forwarded_port", guest: 80, guest_ip: "10.0.2.15", host: 8080
 end
