@@ -1,6 +1,7 @@
 {
   "id": "mautic",
   "groups": [ "mautic" ],
+  "ssh_keys": [ "abc" ],
   "uid": 2002,
   "comment": "mautic user for mautic"
 }
