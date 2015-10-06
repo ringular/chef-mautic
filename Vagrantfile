@@ -9,8 +9,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "hashicorp/precise64"
   # Sync between the web root of the VM and the 'sites' directory
-  config.vm.synced_folder "sites/", "/srv/www"
-
+  config.vm.synced_folder "sites/", "/srv/www", :owner=> 'root', :group=>'root', :mount_options => ['dmode=775', 'fmode=775']
   forward_port[1080]      # mailcatcher
   forward_port[3306]      # mysql
   forward_port[80, 8080]  # nginx/apache
